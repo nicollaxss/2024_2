@@ -11,9 +11,10 @@
 <body>
     <!-- conteudo principal -->
     <main layout:fragment="conteudo" class="flex flex-col w-full pt-3">
+        <h1 class="text-3xl mt-10 ml-10">Pesquisar Vacinas</h1>
         <!-- Formulário -->
-        <form th:action="@{/vacinas/pesquisar}" method="post" class="m-7">
-            <label for="codigo" class="block text-gray-700 font-medium mb-2">Código</label>
+        <form th:action="@{/vacinas/abrirpesquisar}" method="get" class="m-7">
+            <label for="codigo" class="block text-gray-700 font-medium mb-2 mt-10">Código</label>
             <input type="text" id="codigo" name="codigo" class="w-1/2 py-3 px-4 text-gray-500 border-gray-300 rounded-lg focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none" />
             <label for="nome" class="block text-gray-700 font-medium mb-2">Nome</label>
             <input type="text" id="nome" name="nome" class="w-1/2 py-3 px-4 text-gray-500 border-gray-300 rounded-lg focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none" />

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Página Principal</title>
+    <title>Alteração de Vacina</title>
 </head>
 
 <body>
@@ -13,7 +13,9 @@
     <main layout:fragment="conteudo" class="flex flex-col w-full pt-3">
         <h1 class="text-3xl mt-10 ml-10">Cadastrar Vacina</h1>
         <!-- Formulário -->
-        <form th:action="@{/vacinas/nova}" th:object="${vacina}" method="post" class="m-7">
+        <form th:action="@{/vacinas/alterar}" th:object="${vacina}" method="post" class="m-7">
+            <label for="codigo" class="block text-gray-700 font-medium mb-2">Código</label>
+            <input type="text" th:field="*{codigo}" disabled class="w-1/2 py-3 px-4 text-gray-500 border-gray-300 rounded-lg focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none" />
             <label for="nome" class="block text-gray-700 font-medium mb-2 mt-10">Nome</label>
             <input type="text" th:field="*{nome}" class="w-1/2 py-3 px-4 text-gray-500 border-gray-300 rounded-lg focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none" />
             <label for="descricao" class="block text-gray-700 font-medium mb-2">descricao</label>
